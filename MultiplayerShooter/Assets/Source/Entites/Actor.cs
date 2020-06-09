@@ -5,11 +5,13 @@ using UnityEngine;
 public class Actor : Entity
 {
     //Serialized Fields
+    [Header ("Actor")]
     [SerializeField] private float gravity;
     [SerializeField] private float acceleration;
     
     //Private Fields
     private Vector3 velocity;
+    new private CapsuleCollider collider;
 
     //Properties
     protected Vector3 Velocity { get { return velocity;} set { velocity = value; } }
@@ -50,6 +52,8 @@ public class Actor : Entity
     protected override void Initialize()
     {
         base.Initialize();
+        collider = GetComponent<CapsuleCollider>();
+        Debug.Assert(collider != null, "No CapsuleCollider found on GameObject" + gameObject.name);
     }
 
     protected virtual void Awake()

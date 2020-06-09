@@ -131,7 +131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
-  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -214,21 +213,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &705507996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705507993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7abec640dbaa8d34ea3b8339c3860b3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 0
-  gravity: 0
-  acceleration: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,8 +307,8 @@ GameObject:
   - component: {fileID: 1895933054}
   - component: {fileID: 1895933053}
   - component: {fileID: 1895933052}
-  - component: {fileID: 1895933051}
   - component: {fileID: 1895933050}
+  - component: {fileID: 1895933051}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -347,8 +331,8 @@ MonoBehaviour:
   HP: 0
   gravity: 1
   acceleration: 1
---- !u!65 &1895933051
-BoxCollider:
+--- !u!136 &1895933051
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -357,8 +341,9 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1895933052
 MeshRenderer:

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    //Serialized Fields
+    [Header ("Entity")]
     [SerializeField] private int HP;
 
 
