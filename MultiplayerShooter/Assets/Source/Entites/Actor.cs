@@ -53,7 +53,7 @@ public class Actor : Entity
     {
         base.Initialize();
         collider = GetComponent<CapsuleCollider>();
-        Debug.Assert(collider != null, "No CapsuleCollider found on GameObject" + gameObject.name);
+        Debug.Assert(collider != null, "No CapsuleCollider found on GameObject " + gameObject.name);
     }
 
     protected virtual void Awake()
