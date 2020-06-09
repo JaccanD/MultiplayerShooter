@@ -20,7 +20,7 @@ MultiplayerShooter/[Mm]emoryCaptures/
 [Aa]ssets/Plugins/Editor/JetBrains*
 
 # Visual Studio cache directory
-MultiplayerShooter.vs/
+MultiplayerShooter/.vs/
 
 # Gradle cache directory
 .gradle/
