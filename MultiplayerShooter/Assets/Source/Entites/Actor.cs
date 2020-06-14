@@ -11,8 +11,8 @@ public class Actor : Entity
 
     [SerializeField] private LayerMask collisionMask;
     [SerializeField] private float skinWidth;
-    [SerializeField] private float staticFriktion;
-    [SerializeField] private float dynamicFriktion;
+    [SerializeField][Range(0.01f, 0.99f)] private float staticFriktion;
+    [SerializeField][Range(0.01f, 0.99f)] private float dynamicFriktion;
     
     //Private Fields
     private Vector3 velocity;
@@ -34,7 +34,7 @@ public class Actor : Entity
     /// </summary>
     protected virtual void AddForces()
     {
-        Velocity += acceleration * Direction * Time.deltaTime;
+        Velocity += acceleration * (transform.rotation * Direction) * Time.deltaTime;
         Velocity += gravity * Vector3.down * Time.deltaTime;
     }
     /// <summary>
