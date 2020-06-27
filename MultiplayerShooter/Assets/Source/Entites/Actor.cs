@@ -34,6 +34,7 @@ public class Actor : Entity
     /// </summary>
     protected virtual void AddForces()
     {
+        
         Velocity += acceleration * (transform.rotation * Direction) * Time.deltaTime;
         Velocity += gravity * Vector3.down * Time.deltaTime;
     }
