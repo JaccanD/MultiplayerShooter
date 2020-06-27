@@ -16,6 +16,11 @@ public abstract class Weapon : ScriptableObject
 
     protected virtual void Fire()
     {
+        if(loadedBullets == 0)
+        {
+            Reload();
+            return;
+        }
         loadedBullets -= 1;
         GameObject bullet = GameObject.Instantiate(bulletType);
     }
